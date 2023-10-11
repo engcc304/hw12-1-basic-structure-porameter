@@ -40,3 +40,51 @@
         Score : 87.60 points
 
 */
+
+#include <stdio.h>
+
+struct Person {
+    char Name[20] ;
+    int Age ;
+    char Sex ;
+    float Score ;
+};
+
+int main() {
+    struct Person A, B ;
+
+    // รับข้อมูลของ Person A
+    printf( "Person A\n" ) ;
+    printf( "Name : " ) ;
+    scanf( "%s" , A.Name ) ;
+    printf( "Age : ") ;
+    scanf( "%d" , &A.Age) ;
+    printf( "Sex (M/F) : ") ;
+    scanf( " %c" , &A.Sex ) ;
+    printf( "Score : " ) ;
+    scanf( "%f" , &A.Score ) ;
+
+    // รับข้อมูลของ Person B
+    printf( "\nPerson B\n" ) ;
+    printf( "Name : " ) ;
+    scanf( "%s" , B.Name ) ;
+    printf( "Age : " ) ;
+    scanf( "%d" , &B.Age ) ;
+    printf( "Sex (M/F) : " ) ;
+    scanf( " %c" , &B.Sex ) ;
+    printf( "Score : " ) ;
+    scanf( "%f" , &B.Score ) ;
+
+    // แสดงข้อมูล
+    printf( "\n--| Person A Information |--\n" ) ;
+    printf( "Name : %s (%c)\n", A.Name, A.Sex ) ;
+    printf( "Age : %d years old\n", A.Age ) ; 
+    printf( "Score : %.2f points\n", A.Score ) ;
+
+    printf( "\n--| Person B Information |--\n" ) ;
+    printf( "Name : %s (%c)\n" , B.Name, B.Sex ) ;
+    printf( "Age : %d years old\n" , B.Age ) ;
+    printf( "Score : %.2f points\n" , B.Score ) ;
+
+    return 0 ;
+}
